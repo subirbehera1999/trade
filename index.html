@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 1rem 2rem;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .results h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trade Quantity and Target Calculator</h1>
+    <form id="tradeForm">
+        <label for="entryPrice">Entry Price</label>
+        <input type="number" id="entryPrice" name="entryPrice" step="0.01" required>
+        <label for="stopLoss">Stop Loss</label>
+        <input type="number" id="stopLoss" name="stopLoss" step="0.01" required>
+        <label for="capital">Capital</label>
+        <input type="number" id="capital" name="capital" step="0.01" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <div class="results" id="results">
+        <!-- Results will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
