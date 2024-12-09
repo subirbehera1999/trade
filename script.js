@@ -50,7 +50,7 @@ document.getElementById('tradeForm').addEventListener('submit', function (event)
     }
 
     let q = 1;
-    const maxLoss = capital * 0.03; // Maximum loss (3% of capital)
+    const maxLoss = capital * 0.02; // Maximum loss (2% of capital)
     const lossPerShare = entryPrice > stopLoss
         ? entryPrice - stopLoss
         : stopLoss - entryPrice;
